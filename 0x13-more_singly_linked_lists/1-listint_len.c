@@ -3,20 +3,20 @@
 /**
 * listint_len - a function that returns the number of elements
 * in a linked listint_t list
-* @h: a pointer to a listint_t list
+* @myvar: a pointer to a listint_t list
 * Return: returns the number of elements in the list
 */
-size_t listint_len(const listint_t *h)
+size_t listint_len(const listint_t *myvar)
 {
-	size_t i = 0;
+	size_t f = 0;
 
-	if (h == NULL)
+	if (myvar == NULL)
 		return (0);
-	while (h != NULL)
+	while (myvar != NULL)
 	{
-		i++;
-		h = h->next;
+		f++;
+		myvar = myvar->next;
 	}
 
-	return (i);
+	return (f);
 }
