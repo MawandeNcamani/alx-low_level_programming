@@ -2,17 +2,17 @@
 
 /**
 * free_listint - a function that frees a listint_t list
-* @head: the head of the listint_t list
-* Return: returns nothing
+* @head_of: the head of the listint_t list
+* Return: will return nothing
 */
-void free_listint(listint_t *head)
+void free_listint(listint_t *head_of)
 {
-	listint_t *tmp;
+	listint_t *temporary;
 
-	while (head != NULL)
+	while (head_of != NULL)
 	{
-		tmp = head;
-		head = head->next;
-		free(tmp);
+		temporary = head_of;
+		head_of = head_of->next;
+		free(temporary);
 	}
 }
