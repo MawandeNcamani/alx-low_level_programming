@@ -3,19 +3,19 @@
 /**
 * get_nodeint_at_index - a function that returns the nth node of a
 * listint_t linked list
-* @head: the head of the list
+* @head_of: the head of the list
 * @index: the index of the node, starting at 0
-* Return: returns the nth node of the list
+* Return: will return the nth node of the list
 */
-listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
+listint_t *get_nodeint_at_index(listint_t *head_of, unsigned int index)
 {
 	unsigned int i = 0;
 	listint_t *tmp;
 
-	if (!head)
+	if (!head_of)
 		return (NULL);
 
-	tmp = head;
+	tmp = head_of;
 
 	/* Checking if the node exists */
 	while (tmp)
@@ -29,9 +29,9 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	}
 
 	i = 0;
-	tmp = head;
+	tmp = head_of;
 
-	 /* Moving the tmp pointer to the index position */
+
 	while (tmp && i < index)
 	{
 		tmp = tmp->next;
