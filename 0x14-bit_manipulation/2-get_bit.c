@@ -1,17 +1,21 @@
 #include "main.h"
 
 /**
-* get_bit - Returns the value of a bit at a given index
-* @n: The integer number to be operated on
-* @index: The index
+* get_bit - is  a function that returns the value of a bit at a given index
+* @n: the num integer to be operated on
+* @index: the necessary index
 * Return: will return the value of the bit at index or -1 on error
 */
-
 int get_bit(unsigned long int n, unsigned int index)
 {
-if (index > 63)
-return (-1);
+	if (index > 63)
+		return (-1);
 
-int value = ((n >> index) & 1);
-return (value);
+	n >>= index;
+	if ((n & 1) == 1)
+		return (1);
+	else
+		return (0);
+
+	return (-1);
 }
