@@ -1,20 +1,20 @@
 #include "main.h"
 
 /**
-* print_binary - will be function that prints the binary representation of a number
-* @num: the number to be printed in binary form
+* print_binary - functionwhich will print the binary representation of a number
+* @n: the number to be printed in binary form
 * Return: nothing
 */
-void print_binary(unsigned long int num)
+void print_binary(unsigned long int n)
 {
 	int a, b = 0;
-	unsigned long int curr;
+	unsigned long int current;
 
 	for (a = 63; a >= 0; a--)
 	{
-		curr = num >> a;
+		current = n >> a;
 
-		if ((curr & 1) == 1)
+		if ((current & 1) == 1)
 		{
 			_putchar('1');
 			b++;
